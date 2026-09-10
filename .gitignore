@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# scratch exports kept out of version control
+first test.pdf
+smoke_test.pdf
+rugby short front pannel.pdf
+rugby short front pannel removed blank pages.pdf
+rugby short model first attempt.json
