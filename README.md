@@ -82,20 +82,15 @@ make_icon.py    generates pattern.ico
 examples/       a drafted rugby short front panel and its exported tiled PDF
 ```
 
-## What I'd do differently
+## Things to change/ improve
 
-Honest notes, since this grew from a personal tool rather than being designed up front:
-
-- **It's one 5,000-line module.** The geometry functions, the data model, the Tkinter UI and
-  the PDF exporter have no dependencies on each other in principle, and should be four
-  packages. They aren't, because the file grew feature by feature as I needed things.
-- **There are no automated tests.** The geometry is the part that most deserves them.
-  Offsetting and loop chaining have edge cases that I currently find by drawing a shape and
-  looking at it.
-- **PDF export offers to `pip install` reportlab from inside the GUI.** Convenient when the
-  only user is me; not something that belongs in software other people run.
+- **It's built as one long module.** The functions should be four
+  seperate packages. They aren't, because the file grew feature by feature.
+- **There arnt automated tests.**
+- **PDF export offers to `pip install` reportlab from the GUI.** this shouldnt be a feature if other people run the app.
 - Self-intersection on inward offsets isn't handled, so very tight concave corners can
   produce a crossed outline that needs manual correction.
+- The pattern is offten layed out in inefficent ways when exported to pdf this waists paper.
 
 ## License
 
